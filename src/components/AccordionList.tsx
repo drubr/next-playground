@@ -1,5 +1,6 @@
-import Dropdown from "@/components/Dropdown";
+import Accordion from "@/components/Accordion";
 import React from "react";
+import Dropdown from "@/components/Dropdown";
 
 const dropdowns: {
   link: string;
@@ -28,23 +29,46 @@ const dropdowns: {
           src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FEICKglz9OLzthlDNqInA22%2FPlayground%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D51-60%26viewport%3D448%252C1224%252C0.52%26t%3DAqBIGQaU9Ce6Hx57-1%26scaling%3Dmin-zoom%26mode%3Ddesign"
           allowFullScreen
         ></iframe>
+        <div className="mx-auto mt-8">Final Next.js component:</div>
+        <div className="mx-auto w-48">
+          <Dropdown
+            data={[
+              {
+                key: "banana",
+                value: "Banana",
+              },
+              {
+                key: "apple",
+                value: "Apple",
+              },
+              {
+                key: "orange",
+                value: "Orange",
+              },
+              {
+                key: "strawberry",
+                value: "Strawberry",
+              },
+            ]}
+          />
+        </div>
       </>
     ),
   },
 ];
 
-export default function DropdownList() {
+export default function AccordionList() {
   return (
     <ul>
       {dropdowns.map((dropdown, index) => (
         <li key={index}>
-          <Dropdown
+          <Accordion
             title={dropdown.title}
             link={dropdown.link}
             linkHref={dropdown.linkHref}
           >
             {dropdown.content}
-          </Dropdown>
+          </Accordion>
         </li>
       ))}
     </ul>
