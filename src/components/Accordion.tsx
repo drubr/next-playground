@@ -4,12 +4,12 @@ import React, { useState } from "react";
 
 export default function Accordion({
   link,
-  linkHref,
+  linkTitle,
   title,
   children,
 }: {
   link: string;
-  linkHref: string;
+  linkTitle: string;
   title: string;
   children: React.ReactNode;
 }) {
@@ -17,8 +17,8 @@ export default function Accordion({
   return (
     <div className="grid gap-8">
       <header className="grid select-none gap-0.5">
-        <Link href={linkHref} className="text-violet-400" target="_blank">
-          {link}
+        <Link href={link} className="text-violet-400" target="_blank">
+          {linkTitle}
         </Link>
         <div
           className="flex cursor-pointer flex-wrap justify-between gap-4"

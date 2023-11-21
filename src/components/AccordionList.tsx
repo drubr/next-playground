@@ -4,14 +4,13 @@ import Dropdown from "@/components/Dropdown";
 
 const dropdowns: {
   link: string;
-  linkHref: string;
+  linkTitle: string;
   title: string;
   content: React.ReactNode;
 }[] = [
   {
-    link: "Embed-files-and-prototypes",
-    linkHref:
-      "https://help.figma.com/hc/en-us/articles/360039827134-Embed-files-and-prototypes",
+    link: "https://help.figma.com/hc/en-us/articles/360039827134-Embed-files-and-prototypes",
+    linkTitle: "Embed-files-and-prototypes",
     title: "Show Figma files and prototypes in Next.js",
     content: (
       <>
@@ -65,7 +64,7 @@ export default function AccordionList() {
           <Accordion
             title={dropdown.title}
             link={dropdown.link}
-            linkHref={dropdown.linkHref}
+            linkTitle={dropdown.linkTitle}
           >
             {dropdown.content}
           </Accordion>
